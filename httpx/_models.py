@@ -534,6 +534,10 @@ class Response:
             return codes.get_reason_phrase(self.status_code)
 
     @property
+    def reason(self) -> str:
+        return self.reason_phrase
+
+    @property
     def url(self) -> URL:
         """
         Returns the URL for which the request was made.
